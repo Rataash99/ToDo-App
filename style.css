@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Reem Kufi Fun';
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;   
+    height: 100vh;
+    width: 100%;
+    font-weight: 400;
+}
+
+.container{
+    /* border: 2px solid red; */
+    background: url(./Images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 38vh;
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+.container img{
+    cursor: pointer;
+}
+.todo-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header{
+    /* border: 2px solid red; */
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    letter-spacing: 20px;
+    margin-top: 4.5rem;
+}
+.header img{
+    /* border: 2px solid yellow; */
+    margin-top: 12px;
+    height:28px;
+    width: 28px;
+}
+.todo-fill{
+    margin-top: 50px;
+}
+.todo-fill span{
+    border: 1px solid rgb(83, 83, 83);
+    position: absolute;
+    height: 27px;
+    width: 27px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+.todo-fill input{
+    width: 600px;
+    padding: 25px 70px;
+    border-radius: 5px;
+    outline: none;
+    letter-spacing: 2px;
+    border: none;
+    font-size: 17px;
+    color:white;
+    background-color: hsl(235, 24%, 19%);
+}
+
+.todo-list{
+    /* border: 2px solid red; */
+    background-color: hsl(235, 24%, 19%);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 19px 19px;
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 25px;
+    border-bottom: 1px solid rgb(83, 83, 83);
+    ;
+}
+.check{
+    border: 1px solid rgb(83, 83, 83);
+    /* background: linear-gradient(129deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)); */
+    border-radius: 50%;
+    height: 28px; 
+    width: 28px;
+}
+
+.check img{
+    display: none;
+    margin-left: 8px;
+    margin-top: 9px;
+}
+.check:hover{
+    border: 1px solid rgb(132, 212, 237);
+    cursor: pointer;
+}
+.todo-list p{
+    position: absolute;
+    margin-left: 52px;
+}
+.close{
+    display: none;
+    transition: all 2s ease;
+}
+.todo-list:hover .close{
+    display: block;
+}
+.selection{
+    background-color: hsl(235, 24%, 19%);
+    width: 600px;
+    display: flex;
+    padding: 19px 22px;
+    justify-content: space-between;
+    color: rgb(124, 124, 124);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.selection p:hover{
+    color:white;
+    cursor: pointer;
+}
+.select-choice{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 20px;
+}
