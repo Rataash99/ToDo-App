@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Reem+Kufi+Fun&display=swap" rel="stylesheet">   <link rel="stylesheet" href="./style.css">
-  <title>Todo app</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Reem+Kufi+Fun&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Todo app</title>
 </head>
+
 <body>
     <div class="container">
         <div class="todo-container">
@@ -15,15 +19,21 @@
             </div>
             <div class="todo-fill">
                 <span></span>
-                <input type="text" placeholder="Create a new todo..">
+                <form>
+                    <input id="type-todo" type="text" placeholder="Create a new todo..">
+                </form>
             </div>
-            <div class="todo-list">
-                    <div class="check"><img src="./Images/icon-check.svg" alt=""></div>
-                    <p>Jog around the park 3x</p>
-                <img class = "close" src="./Images/icon-cross.svg" alt="">
+            <div id = 'text'>
+                    <div class="todo-list">
+                        <div class = checkNPara>
+                            <div class="check"><img class = 'check-icon' src="./Images/icon-check.svg" alt=""></div>
+                            <p>Jog around the park 3x</p>
+                        </div>
+                            <img class="close" src="./Images/icon-cross.svg" alt="">
+                    </div>
             </div>
             <div class="selection">
-                <p>5 items left</p>
+                <p class = "items-left">1 items left</p>
                 <div class="select-choice">
                     <p class="all">All</p>
                     <p class="active">Active</p>
@@ -33,12 +43,14 @@
             </div>
         </div>
     </div>
- 
 
-  <!-- <div class="attribution">
+
+    <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
     <script src="./index.js"></script>
   </div> -->
+  <script src="./index.js"></script>
 </body>
+
 </html>

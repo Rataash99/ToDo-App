@@ -7,10 +7,9 @@
 body{
     background-color: black;
     color: white;
-    font-family: 'Josefin Sans', sans-serif;   
     height: 100vh;
     width: 100%;
-    font-weight: 400;
+    /* font-weight: 400; */
 }
 
 .container{
@@ -19,7 +18,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     max-height: 38vh;
-    letter-spacing: 2px;
+    word-spacing: 2px;
     font-size: 17px;
     font-family: 'Reem Kufi Fun', sans-serif;
 }
@@ -41,7 +40,7 @@ body{
     justify-content: space-between;
     font-size: 1.3rem;
     letter-spacing: 20px;
-    margin-top: 4.5rem;
+    margin-top: 4rem;
 }
 .header img{
     /* border: 2px solid yellow; */
@@ -50,7 +49,7 @@ body{
     width: 28px;
 }
 .todo-fill{
-    margin-top: 50px;
+    margin-top: 35px;
 }
 .todo-fill span{
     border: 1px solid rgb(83, 83, 83);
@@ -66,13 +65,20 @@ body{
     padding: 25px 70px;
     border-radius: 5px;
     outline: none;
-    letter-spacing: 2px;
+    word-spacing: 2px;
     border: none;
     font-size: 17px;
     color:white;
+    margin-bottom: 20px;
     background-color: hsl(235, 24%, 19%);
 }
-
+#text{
+    max-height: 23rem;
+    overflow-y: scroll;
+}
+#text::-webkit-scrollbar {
+    display: none;
+}
 .todo-list{
     /* border: 2px solid red; */
     background-color: hsl(235, 24%, 19%);
@@ -81,41 +87,45 @@ body{
     align-items: center;
     padding: 19px 19px;
     width: 600px;
-    height: auto;
+    height: 70px;
     border-radius: 5px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    margin-top: 25px;
     border-bottom: 1px solid rgb(83, 83, 83);
-    ;
+}
+.checkNPara{
+    display: flex;
+}
+.todo-list p{
+    /* border: 2px solid red; */
+    margin-left: 25px;
+    cursor:default;
 }
 .check{
     border: 1px solid rgb(83, 83, 83);
-    /* background: linear-gradient(129deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)); */
     border-radius: 50%;
-    height: 28px; 
+    height: 28px;
     width: 28px;
 }
 
 .check img{
     display: none;
-    margin-left: 8px;
-    margin-top: 9px;
+    margin-left: 9px;
+    margin-top: 10px;
 }
 .check:hover{
     border: 1px solid rgb(132, 212, 237);
     cursor: pointer;
 }
-.todo-list p{
-    position: absolute;
-    margin-left: 52px;
+.active-check{
+    
 }
 .close{
-    display: none;
-    transition: all 2s ease;
+    opacity: 0;
+    transition: all 0.6s ease;
 }
 .todo-list:hover .close{
-    display: block;
+    opacity: 1;
 }
 .selection{
     background-color: hsl(235, 24%, 19%);
@@ -124,15 +134,23 @@ body{
     padding: 19px 22px;
     justify-content: space-between;
     color: rgb(124, 124, 124);
+    /* border-top: 1px solid rgb(83, 83, 83); */
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.selection p:hover{
+.select-choice p:hover{
     color:white;
+    cursor: pointer;
+}
+.clear-completed:hover{
+    color: white;
     cursor: pointer;
 }
 .select-choice{
     /* border: 1px solid red; */
     display: flex;
     gap: 20px;
+}
+.active-theme{
+
 }
