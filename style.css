@@ -14,7 +14,7 @@ body{
 
 .container{
     /* border: 2px solid red; */
-    background: url(./Images/bg-desktop-dark.jpg);
+    background-image: url(./Images/bg-desktop-dark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     max-height: 38vh;
@@ -49,7 +49,9 @@ body{
     width: 28px;
 }
 .todo-fill{
+    /* border: 2px solid red; */
     margin-top: 35px;
+    margin-bottom: 20px;
 }
 .todo-fill span{
     border: 1px solid rgb(83, 83, 83);
@@ -60,7 +62,8 @@ body{
     margin-left: 20px;
     border-radius: 50%;
 }
-.todo-fill input{
+.input{
+    background-color: hsl(235, 24%, 19%);
     width: 600px;
     padding: 25px 70px;
     border-radius: 5px;
@@ -69,8 +72,6 @@ body{
     border: none;
     font-size: 17px;
     color:white;
-    margin-bottom: 20px;
-    background-color: hsl(235, 24%, 19%);
 }
 #text{
     max-height: 23rem;
@@ -118,7 +119,7 @@ body{
     cursor: pointer;
 }
 .active-check{
-    
+    display: block;
 }
 .close{
     opacity: 0;
@@ -151,6 +152,23 @@ body{
     display: flex;
     gap: 20px;
 }
-.active-theme{
-
+.input-light-theme{
+    background-color: white;
+    color: black;
+}
+.theme-for-selection{
+    background-color: white;
+}
+.body-bg{
+    background-color: hsl(240, 12%, 90%);
+}
+.theme-for-selection p:hover{
+    color: black;
+}
+.theme-selection-first-p:hover{
+    color: rgb(124, 124, 124);
+}
+.todo-list-bg{
+    background-color: white;
+    color:black;
 }

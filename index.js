@@ -1,11 +1,34 @@
 let text = document.getElementById('text');
-let todo_list = document.getElementsByClassName('todo-list')[0];
+let todo_list = document.querySelector('.todo-list');
 let form = document.querySelector('form');
 let type_todo = document.getElementById('type-todo');
 let items_left = document.querySelector('.items-left');
 let check_Img = document.querySelector('.check');
+let selection = document.querySelector('.selection');
+let container = document.querySelector('.container');
+let theme_image = document.getElementById('theme-image');
+let body = document.querySelector('body');
+let todo_fill = document.querySelector('.todo-fill');
+// console.log(input);
 
-console.log(check_Img);
+function toggleTheme(){
+    
+    if(theme_image.getAttribute('src') == './Images/icon-sun.svg'){
+        theme_image.setAttribute('src','./Images/icon-moon.svg')
+        container.style.background = `url('./Images/bg-desktop-light.jpg') no-repeat center / cover`
+    }
+    else{
+        theme_image.setAttribute('src','./Images/icon-sun.svg')
+        container.style.background = `url('./Images/bg-desktop-dark.jpg') no-repeat center / cover`
+    }
+    selection.classList.toggle('theme-for-selection');
+    items_left.classList.toggle('theme-selection-first-p');
+    body.classList.toggle('body-bg');
+    type_todo.classList.toggle('input-light-theme');
+    todo_list.classList.toggle('todo-list-bg');
+}
+
+theme_image.addEventListener('click',toggleTheme)
 
 function check(){
     let check_Icon = document.querySelector('.check-icon');
@@ -46,6 +69,6 @@ form.addEventListener('submit', (e) => {
     type_todo.value = "";
 })
 check_Img.addEventListener('click',check)
-addDiv.remove();
+// addDiv.remove();
 
 
