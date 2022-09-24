@@ -1,4 +1,3 @@
-let text = document.getElementById('text');
 let todo_list = document.querySelector('.todo-list');
 let form = document.querySelector('form');
 let type_todo = document.getElementById('type-todo');
@@ -9,7 +8,8 @@ let container = document.querySelector('.container');
 let theme_image = document.getElementById('theme-image');
 let body = document.querySelector('body');
 let todo_fill = document.querySelector('.todo-fill');
-// console.log(input);
+let text = document.querySelector('.text');
+let close = document.querySelector('.close')
 
 function toggleTheme(){
     
@@ -25,26 +25,13 @@ function toggleTheme(){
     items_left.classList.toggle('theme-selection-first-p');
     body.classList.toggle('body-bg');
     type_todo.classList.toggle('input-light-theme');
-    todo_list.classList.toggle('todo-list-bg');
-}
-
-theme_image.addEventListener('click',toggleTheme)
-
-function check(){
-    let check_Icon = document.querySelector('.check-icon');
-    check_Icon.style.display = "block";
-    check_Img.style.background ="linear-gradient(129deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))";
-    check_Img.style.border = 'none';
-}
-
-function countItems(){
-    let items =  text.childElementCount;
-    items_left.textContent = `${items} items left`
+    text.classList.toggle("todo-list-bg");
 }
 
 function appendToList() {
     let textVal = type_todo.value;
     let addDiv = document.createElement('div');
+    addDiv.className = "main-class"
     addDiv.innerHTML = `
     <div class="todo-list">
     <div class = checkNPara>
@@ -55,11 +42,40 @@ function appendToList() {
     </div>`
     text.appendChild(addDiv);
 }
-function close(){
-    let close = document.querySelector('.close')
-    // close.addEventListener('click',() => {
-    // })
+
+function countItems(){
+    let items =  text.childElementCount;
+    // console.log(items)
+    if(items > 1){
+        items_left.textContent = `${items} tasks left`
+    }
+    else if (items == 1){
+        items_left.textContent = `${items} task left`
+    }
+    else{
+        items_left.textContent = "no tasks added"
+    }
 }
+
+theme_image.addEventListener('click',toggleTheme)
+function check(){
+    let check_Icon = document.querySelector('.check-icon');
+    check_Icon.style.display = "block";
+    check_Img.style.background ="linear-gradient(129deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))";
+    check_Img.style.border = 'none';
+}
+function removeItems(e){
+    e.remove();
+}
+text.addEventListener('click', (e) => {
+    console.log(e)
+    if(e.target.classList.contains('close')){
+        removeItems(e.path[2]);
+    }
+    countItems();
+})
+
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     if(type_todo.value !== ''){
@@ -68,7 +84,4 @@ form.addEventListener('submit', (e) => {
     countItems();
     type_todo.value = "";
 })
-check_Img.addEventListener('click',check)
-// addDiv.remove();
-
 
