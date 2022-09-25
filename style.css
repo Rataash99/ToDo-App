@@ -58,7 +58,7 @@ body{
     position: absolute;
     height: 27px;
     width: 27px;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-left: 20px;
     border-radius: 50%;
 }
@@ -109,17 +109,13 @@ body{
     width: 28px;
 }
 
-.check img{
+.check-icon{
+    /* border: 2px solid red; */
     display: none;
-    margin-left: 9px;
-    margin-top: 10px;
 }
 .check:hover{
     border: 1px solid rgb(132, 212, 237);
     cursor: pointer;
-}
-.active-check{
-    display: block;
 }
 .close{
     opacity: 0;
@@ -143,6 +139,7 @@ body{
     color:white;
     cursor: pointer;
 }
+
 .clear-completed:hover{
     color: white;
     cursor: pointer;
@@ -153,14 +150,14 @@ body{
     gap: 20px;
 }
 .input-light-theme{
-    background-color: white;
-    color: black;
+    background-color: hsl(0, 0%, 98%);
+    color:black;
 }
 .theme-for-selection{
-    background-color: white;
+    background-color: hsl(0, 0%, 98%)
 }
 .body-bg{
-    background-color: hsl(240, 12%, 90%);
+    background-color: hsl(236, 33%, 92%);
 }
 .theme-for-selection p:hover{
     color: black;
@@ -171,4 +168,27 @@ body{
 .todo-list-bg{
     color:black;
     background-color: hsl(0, 0%, 98%);
+}
+.check-icon-style{
+    display: block;
+    margin-left: 8px;
+    margin-top: 9px;
+}
+.active-check{
+    background: linear-gradient(129deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border: 1px solid hsl(235, 24%, 19%);
+}
+.line-thru{
+    text-decoration: line-through;
+    opacity: 0.5;
+    text-align: center;
+}
+.display-active{
+    display: none;
+}
+.display-completed{
+    display: none;
+}
+.add-blue{
+    color:hsl(220, 98%, 61%);
 }
