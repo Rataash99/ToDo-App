@@ -13,6 +13,20 @@ let check_Icon = document.querySelector('.check-icon');
 let check_Img = document.querySelector('.check');
 let active = document.getElementsByClassName('active')[0];
 
+function appendToList() {
+    let textVal = type_todo.value;
+    let addDiv = document.createElement('div');
+    addDiv.className = "main-class"
+    addDiv.innerHTML = `
+    <div class="todo-list">
+    <div class = checkNPara>
+    <div class="check"><img class = "check-icon" src="./Images/icon-check.svg" alt=""></div>
+    <p>${textVal}</p>
+    </div>
+    <img class="close" src="./Images/icon-cross.svg" alt="">
+    </div>`
+    text.appendChild(addDiv);
+}
 function show_active() {
     let active_task = (text.getElementsByClassName('checkNPara'))
     let active_arr = Array.from(active_task);
