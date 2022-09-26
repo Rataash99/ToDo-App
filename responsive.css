@@ -1,0 +1,95 @@
+@media only screen and (max-width: 750px){
+    .container{
+        word-spacing: 1.5px;
+        font-size: 13px;
+    }
+    .header{
+        width: 26rem;
+        font-size: 1.1rem;
+        letter-spacing: 16px;
+        margin-top: 3rem;
+    }
+    .header img{
+        height:22px;
+        width: 22px;
+    }
+    .todo-fill{
+        margin-top: 30px;
+    }
+    .todo-fill span{
+        height: 22px;
+        width: 22px;
+        margin-top: 17px;
+    }
+    .input{
+        width: 26rem;
+        padding: 18px 70px;
+        word-spacing: 1.6px;
+        font-size: 13px;
+    }
+    .input::placeholder{
+        font-size: 13px;
+    }
+    .todo-list{
+        padding: 13px 12px;
+        width: 26rem;
+        height: 55px;
+    }
+    .todo-list p{
+        margin-left: 30px;
+    }
+    .check{
+        height: 22px;
+        width: 22px;
+        margin-left: 8px;
+    }
+    .close{
+        opacity: 1;
+        height: 15px;
+        width: 15px;
+    }
+    .selection{
+        width: 26rem;
+        padding: 15px 18px;
+        justify-content: space-between;
+    }
+    .select-choice{
+        gap: 10px;
+    }
+    .check-icon-style{
+        margin-left: 5px;
+        margin-top: 6px;
+    }
+}
+/* ------------------------------------------------------------ */
+@media only screen and (max-width: 500px){
+    .container{
+        word-spacing: 1.3px;
+        font-size: 10px;
+    }
+    .header{
+        width: 21rem;
+        font-size: 1rem;
+    }
+    .todo-fill span{
+        margin-top: 17px;
+    }
+    .input{
+        width: 21rem;
+        padding: 18px 70px;
+        font-size: 10px;
+    }
+    .input::placeholder{
+        font-size: 10px;
+    }
+    .todo-list{
+        width: 21rem;
+        height: 50px;
+    }
+    .selection{
+        width: 21rem;
+    }
+    .select-choice{
+        gap: 10px;
+    }
+}
