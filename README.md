@@ -15,10 +15,9 @@
 
 Users should be able to:
 
-- See all countries from the API on the homepage
-- Search for a country using an `input` field
-- Filter countries by region
-- Click on a country to see more detailed information on a separate page
+- `Add` and `Remove` task 
+- Filter task as completed, incomplete, all
+- Toggle Dark/Light mode
 
 ### Links
 
