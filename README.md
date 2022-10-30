@@ -1,5 +1,5 @@
 # ToDo-App
-# I would like to thank **frontendmentor** for providing us with such good projects. Please do check out challenges on [frontendmentor](https://www.frontendmentor.io/challenges)
+# I would like to thank ```frontendmentor``` for providing us with such good projects. Please do check out challenges on [frontendmentor](https://www.frontendmentor.io/challenges)
 
 ## Table of contents
 
