@@ -135,15 +135,16 @@ function countItems() {
     }
 }
 function check(e) {
+    console.log(e.composedPath()[0]);
     if (e.target.classList.contains('check-icon')) {
-        e.path[1].classList.toggle('active-check');
-        e.path[1].lastElementChild.classList.toggle('check-icon-style');
-        e.path[2].lastElementChild.classList.toggle('line-thru')
+        e.composedPath()[1].classList.toggle('active-check');
+        e.composedPath()[1].lastElementChild.classList.toggle('check-icon-style');
+        e.composedPath()[2].lastElementChild.classList.toggle('line-thru')
     }
     else {
-        e.path[0].lastElementChild.classList.toggle('check-icon-style');
-        e.path[0].classList.toggle('active-check');
-        e.path[1].lastElementChild.classList.toggle('line-thru')
+        e.composedPath()[0].lastElementChild.classList.toggle('check-icon-style');
+        e.composedPath()[0].classList.toggle('active-check');
+        e.composedPath()[1].lastElementChild.classList.toggle('line-thru')
     }
 }
 function removeItems(e) {
@@ -154,7 +155,7 @@ theme_image.addEventListener('click', toggleTheme)
 
 text.addEventListener('click', (e) => {
     if (e.target.classList.contains('close')) {
-        removeItems(e.path[2]);
+        removeItems(e.composedPath()[2]);
     }
     if (e.target.classList.contains('check-icon') || (e.target.classList.contains('check'))) {
         check(e)
